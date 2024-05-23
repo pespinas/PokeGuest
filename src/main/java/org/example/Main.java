@@ -14,7 +14,7 @@ import java.io.IOException;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        PokeApiClient.getPokemonInfo("sceptile", new Callback() {
+        PokeApiClient.getPokemonInfo("gholdengo", new Callback() {
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 if (response.isSuccessful()) {
