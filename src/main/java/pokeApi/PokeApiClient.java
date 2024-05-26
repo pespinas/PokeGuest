@@ -1,16 +1,10 @@
 package pokeApi;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonElement;
+
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-import okhttp3.Response;
-
-import java.io.IOException;
 import java.util.Random;
 
 public class PokeApiClient {
@@ -27,6 +21,11 @@ public class PokeApiClient {
     }
     public static void getPokemonInfo(String poke, Callback callback) {
         String url = "https://pokeapi.co/api/v2/pokemon/" + poke;
+        apiCall(url, callback);
+    }
+
+    public static void getPokemonId(String poke, Callback callback) {
+        String url = "https://pokeapi.co/api/v2/pokemon-species/" + poke;
         apiCall(url, callback);
     }
     public static void getRandomPokemon(Callback callback) {
